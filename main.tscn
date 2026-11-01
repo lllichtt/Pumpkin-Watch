@@ -1,0 +1,537 @@
+[gd_scene format=3 uid="uid://brsti2tybxrnn"]
+
+[ext_resource type="Texture2D" uid="uid://vjsgpdrrd21a" path="res://assets/backgrounds/фон2.png" id="1_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bfv5q6csv3jh0" path="res://assets/sprites/pumpkin.png" id="2_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bh6md2o6ef7xq" path="res://assets/backgrounds/05witch_clearing.png" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://dv8wgdcxba73o" path="res://game_view.gd" id="4_5vw27"]
+[ext_resource type="Script" uid="uid://c1o6opl11kaxm" path="res://scripts/pumpkin.gd" id="5_7mycd"]
+[ext_resource type="Shader" uid="uid://deqff52d8jnke" path="res://main.gdshader" id="5_lquwl"]
+
+[sub_resource type="Theme" id="Theme_4kxuq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("5_lquwl")
+shader_parameter/noise_strength = 0.35
+shader_parameter/glitch_strength = 0.15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.65882355, 0.28627452, 0.15294118, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0.47058824, 0.20784314, 0.12156863, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(0.76862746, 0.3647059, 0.19607843, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kxuq"]
+bg_color = Color(0.65882355, 0.28627452, 0.15294118, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm1bc"]
+bg_color = Color(0.47058824, 0.20784314, 0.12156863, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mti6b"]
+bg_color = Color(0.76862746, 0.3647059, 0.19607843, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62yky"]
+bg_color = Color(0.65882355, 0.28627452, 0.15294118, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwqyf"]
+bg_color = Color(0.47058824, 0.20784314, 0.12156863, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vnta"]
+bg_color = Color(0.76862746, 0.3647059, 0.19607843, 1)
+
+[node name="Control" type="Control" unique_id=1273099110]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4kxuq")
+
+[node name="фон2" type="TextureRect" parent="." unique_id=162051821]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lquwl")
+expand_mode = 1
+
+[node name="gameview" type="Control" parent="." unique_id=2143725870]
+process_mode = 3
+layout_mode = 1
+anchor_left = 0.30100003
+anchor_top = 0.134
+anchor_right = 0.841
+anchor_bottom = 0.731
+offset_left = -1.7520447
+offset_top = -0.83200073
+offset_right = 2.1679688
+offset_bottom = 3.3119812
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_5vw27")
+
+[node name="camerafeed" type="TextureRect" parent="gameview" unique_id=671651785]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1bvp3")
+expand_mode = 1
+
+[node name="pumpkinlayer" type="Control" parent="gameview" unique_id=1429057111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="тыковка1" type="Sprite2D" parent="gameview/pumpkinlayer" unique_id=193253913]
+position = Vector2(114.999985, 177.99998)
+scale = Vector2(0.7340905, 0.8378164)
+texture = ExtResource("2_7mycd")
+script = ExtResource("5_7mycd")
+
+[node name="тыковка2" type="Sprite2D" parent="gameview/pumpkinlayer" unique_id=581791878]
+position = Vector2(340, 250)
+scale = Vector2(0.88627607, 0.9699285)
+texture = ExtResource("2_7mycd")
+script = ExtResource("5_7mycd")
+
+[node name="тыковка3" type="Sprite2D" parent="gameview/pumpkinlayer" unique_id=1315793500]
+position = Vector2(340, 250)
+scale = Vector2(0.88627607, 0.9699285)
+texture = ExtResource("2_7mycd")
+script = ExtResource("5_7mycd")
+
+[node name="glitchoverlay" type="ColorRect" parent="gameview" unique_id=945478402]
+material = SubResource("ShaderMaterial_1bvp3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08235294, 0.08235294, 0.08235294, 0.42745098)
+
+[node name="SprayButton" type="Button" parent="gameview" unique_id=1486037619]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.87200004
+anchor_right = 0.272
+anchor_bottom = 1.0
+offset_top = 0.047973633
+offset_right = -0.27200317
+grow_vertical = 0
+text = "SPRAY"
+
+[node name="SprayFlash" type="ColorRect" parent="gameview" unique_id=1122033326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.52156866, 0.60784316, 0.4, 0)
+
+[node name="NightClock" type="Label" parent="gameview" unique_id=385477674]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.80200005
+anchor_right = 1.0
+anchor_bottom = 0.1
+offset_left = 39.947968
+offset_bottom = -0.10000229
+grow_horizontal = 0
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0.881078, 0.8743275, 0.860087, 1)
+theme_override_font_sizes/font_size = 28
+text = "12:00 AM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cameramap" type="Panel" parent="." unique_id=1393614888]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.296
+anchor_right = 0.282
+anchor_bottom = 0.679
+offset_left = 0.5759964
+offset_top = 0.19200134
+offset_right = 0.13598633
+offset_bottom = 0.0079956055
+grow_vertical = 0
+
+[node name="MapTitle" type="Label" parent="cameramap" unique_id=1896005069]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.115
+anchor_top = -0.096
+anchor_right = 0.80600005
+anchor_bottom = 0.009000001
+offset_left = -0.09500122
+offset_top = 0.024000168
+offset_right = 0.08198547
+offset_bottom = 0.028999925
+text = "CAMERA NETWORK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="You" type="Label" parent="cameramap" unique_id=183995241]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 216.0
+offset_right = 136.0
+offset_bottom = 239.0
+text = "YOU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cam01Button" type="Button" parent="cameramap" unique_id=687427667]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 166.0
+offset_top = 106.0
+offset_right = 232.0
+offset_bottom = 137.0
+text = "CAM 01"
+
+[node name="Cam02Button" type="Button" parent="cameramap" unique_id=1512840984]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 27.0
+offset_right = 227.0
+offset_bottom = 58.0
+text = "CAM 02"
+
+[node name="Cam03Button" type="Button" parent="cameramap" unique_id=1387956164]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 169.0
+offset_right = 155.0
+offset_bottom = 200.0
+text = "CAM 03"
+
+[node name="Cam04Button" type="Button" parent="cameramap" unique_id=413945208]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 107.0
+offset_right = 82.0
+offset_bottom = 138.0
+text = "CAM 04"
+
+[node name="Cam05Button" type="Button" parent="cameramap" unique_id=1165066337]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 57.0
+text = "CAM 05"
+
+[node name="Line01" type="Label" parent="cameramap" unique_id=931238788]
+layout_mode = 0
+offset_left = 182.00002
+offset_top = 47.0
+offset_right = 191.00002
+offset_bottom = 70.0
+scale = Vector2(2.5, 2.5)
+text = "|"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line06" type="Label" parent="cameramap" unique_id=1514450304]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 30.0
+offset_right = 169.0
+offset_bottom = 53.0
+rotation = 1.5707964
+scale = Vector2(2.5, 2.5)
+text = "|"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line05" type="Label" parent="cameramap" unique_id=323322229]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 193.0
+offset_right = 126.0
+offset_bottom = 216.0
+text = "|"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line03" type="Label" parent="cameramap" unique_id=372033336]
+layout_mode = 0
+offset_left = 51.999992
+offset_top = 123.0
+offset_right = 60.999992
+offset_bottom = 146.0
+scale = Vector2(2.5, 2.5)
+text = "\\"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line04" type="Label" parent="cameramap" unique_id=781111896]
+layout_mode = 0
+offset_left = 167.00002
+offset_top = 123.0
+offset_right = 176.00002
+offset_bottom = 146.0
+scale = Vector2(2.5, 2.5)
+text = "/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line07" type="Label" parent="cameramap" unique_id=1286174075]
+layout_mode = 0
+offset_left = 121.00001
+offset_top = 24.999992
+offset_right = 133.58046
+offset_bottom = 50.387924
+rotation = 0.31939524
+scale = Vector2(4.5, 4.5)
+text = "/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line02" type="Label" parent="cameramap" unique_id=1479738483]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 44.0
+offset_right = 47.0
+offset_bottom = 67.0
+scale = Vector2(2.5, 2.5)
+text = "|"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverScreen" type="Control" parent="." unique_id=211600637]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="GameOverScreen" unique_id=203506736]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13777432, 0.12897632, 0.12346851, 0.88235295)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverScreen" unique_id=1565758054]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.5
+offset_top = -140.0
+offset_right = 192.5
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="text2" type="Label" parent="GameOverScreen/VBoxContainer" unique_id=1440076707]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.52156866, 0.5019608, 0.54509807, 1)
+theme_override_font_sizes/font_size = 30
+text = "SIGNAL LOST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="GameOverScreen/VBoxContainer" unique_id=1532884163]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.45882353, 0.19607843, 1)
+theme_override_font_sizes/font_size = 64
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text" type="Label" parent="GameOverScreen/VBoxContainer" unique_id=333592445]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5833355, 0.5397363, 0.8944121, 1)
+theme_override_font_sizes/font_size = 32
+text = "THE PUMPKINS GOT YOU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="GameOverScreen/VBoxContainer" unique_id=76014396]
+custom_minimum_size = Vector2(240, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.8509804, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_5vw27")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4c57u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kek77")
+text = "MAIN MENU"
+
+[node name="MainMenu" type="Control" parent="." unique_id=1231053832]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="MainMenu" unique_id=1760998222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.0627451, 0.101960786, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu" unique_id=730793930]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -31.0
+offset_right = 68.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MainMenu/VBoxContainer" unique_id=1837727394]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.45882353, 0.19607843, 1)
+theme_override_font_sizes/font_size = 56
+text = "PUMPKIN WATCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitLabel" type="Label" parent="MainMenu/VBoxContainer" unique_id=1139499184]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.58431375, 0.5411765, 0.89411765, 1)
+theme_override_font_sizes/font_size = 30
+text = "PAY ATTENTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="MainMenu/VBoxContainer" unique_id=1496865325]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.8509804, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_4kxuq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mm1bc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mti6b")
+text = "START"
+
+[node name="VictoryScreen" type="Control" parent="." unique_id=912440498]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="VictoryScreen" unique_id=583266666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13725491, 0.12941177, 0.12156863, 0.88235295)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VictoryScreen" unique_id=359731316]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TimeLabel" type="Label" parent="VictoryScreen/VBoxContainer" unique_id=858308702]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8352941, 0.77254903, 0.7058824, 1)
+theme_override_font_sizes/font_size = 32
+text = "6:00 AM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VictoryLabel" type="Label" parent="VictoryScreen/VBoxContainer" unique_id=1663839544]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.45882353, 0.19607843, 1)
+theme_override_font_sizes/font_size = 56
+text = "YOU SURVIVED!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="VictoryScreen/VBoxContainer" unique_id=1562839161]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.8509804, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_62yky")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qwqyf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6vnta")
+text = "MAIN MENU"
+
+[connection signal="pressed" from="gameview/SprayButton" to="gameview" method="_on_spray_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/VBoxContainer/MainMenuButton" to="gameview" method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/StartButton" to="gameview" method="_on_start_button_pressed"]
+[connection signal="pressed" from="VictoryScreen/VBoxContainer/MainMenuButton" to="gameview" method="_on_victory_main_menu_button_pressed"]
